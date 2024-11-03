@@ -1,6 +1,7 @@
 package com.dawoofee.tutorialmod;
 
 
+import com.dawoofee.tutorialmod.block.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 
 import com.dawoofee.tutorialmod.item.ModItems;
@@ -14,5 +15,6 @@ public class TutorialMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
