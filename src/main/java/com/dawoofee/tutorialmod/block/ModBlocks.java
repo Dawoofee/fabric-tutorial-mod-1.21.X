@@ -16,7 +16,10 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     public static final Block SAPPHIRE_BLOCK = registerBlock( "sapphire_block",
             new Block(AbstractBlock.Settings.create().strength(5.0F, 6.0F)
-                .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+                .requiresTool().sounds(BlockSoundGroup.METAL)));
+    public static final Block SAPPHIRE_ORE_BLOCK = registerBlock( "sapphire_ore_block",
+            new Block(AbstractBlock.Settings.create().strength(3.0F, 3.0F)
+                    .requiresTool().sounds(BlockSoundGroup.STONE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -33,6 +36,7 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(SAPPHIRE_BLOCK);
+            entries.add(SAPPHIRE_ORE_BLOCK);
         });
     }
 }
